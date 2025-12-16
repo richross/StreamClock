@@ -1,0 +1,5 @@
+kivy==2.2.1
+# If targeting Raspberry Pi, use the platform-specific wheels or install via apt where applicable
+# Additional optional deps for streaming integrations (not required yet):
+# google-api-python-client
+# websocket-client
