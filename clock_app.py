@@ -72,7 +72,17 @@ class ClockScreen(Screen):
         if self.stream_widget:
             root_layout.add_widget(self.stream_widget)
         
-        # Add YouTube toggle button if integration is available
+        #invisible Exit button (overlaid on top)
+        exit_btn = Button(
+            text="",
+            background_color=(0,0,0,0),
+            size_hint=(1, 1),
+            pos_hint={'x': 0, 'y': 0}
+        )
+        exit_btn.bind(on_press=lambda instance: App.get_running_app().stop())
+        root_layout.add_widget(exit_btn)
+        
+        # Add YouTube toggle button if integration is available (added last so it's on top)
         if YOUTUBE_INTEGRATION_AVAILABLE and self.config:
             self.youtube_toggle_btn = Button(
                 text="YT",
@@ -85,16 +95,6 @@ class ClockScreen(Screen):
             self.youtube_toggle_btn.bind(on_press=self.toggle_youtube_integration)
             self._update_toggle_button_appearance()
             root_layout.add_widget(self.youtube_toggle_btn)
-        
-        #invisible Exit button (overlaid on top)
-        exit_btn = Button(
-            text="",
-            background_color=(0,0,0,0),
-            size_hint=(1, 1),
-            pos_hint={'x': 0, 'y': 0}
-        )
-        exit_btn.bind(on_press=lambda instance: App.get_running_app().stop())
-        root_layout.add_widget(exit_btn)
 
         self.add_widget(root_layout)
         Clock.schedule_interval(self.update_time, 0.5)
