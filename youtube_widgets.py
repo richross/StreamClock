@@ -4,7 +4,7 @@ Kivy widgets for displaying YouTube stream information.
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.label import Label
 from kivy.graphics import Color, Rectangle
-from datetime import timedelta
+from datetime import datetime, timedelta
 
 
 class StreamStatsWidget(BoxLayout):
@@ -115,7 +115,6 @@ class StreamStatsWidget(BoxLayout):
         if features.get('stream_duration') and is_live:
             start_time = data.get('stream_start_time')
             if start_time:
-                from datetime import datetime
                 duration = datetime.now() - start_time.replace(tzinfo=None)
                 hours = int(duration.total_seconds() // 3600)
                 minutes = int((duration.total_seconds() % 3600) // 60)
@@ -216,7 +215,6 @@ class CompactStreamStatsWidget(Label):
         if features.get('stream_duration'):
             start_time = data.get('stream_start_time')
             if start_time:
-                from datetime import datetime
                 duration = datetime.now() - start_time.replace(tzinfo=None)
                 hours = int(duration.total_seconds() // 3600)
                 minutes = int((duration.total_seconds() % 3600) // 60)

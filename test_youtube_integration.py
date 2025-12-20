@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 import json
 import os
 import sys
+import time
 
 # Add parent directory to path
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -240,6 +241,4 @@ class TestYouTubePoller(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # Import time here to avoid issues with mocking
-    import time
     unittest.main()
