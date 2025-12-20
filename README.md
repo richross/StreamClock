@@ -20,6 +20,7 @@ A fullscreen Kivy clock application designed for Raspberry Pi with YouTube Live 
 - **Stream Health Monitoring**: Connection quality metrics (basic implementation)
 - **Configurable Features**: Enable/disable individual stat displays
 - **Compact Mode**: Minimal single-line display option
+- **Toggle Button**: One-click enable/disable button in lower right corner (no restart needed)
 - **Graceful Degradation**: Clock works even when API is unavailable
 
 ## Screenshots
@@ -111,6 +112,23 @@ Edit `config.json` to customize settings:
 - **`youtube.polling_interval`**: Seconds between API updates (30-60 recommended)
 - **`youtube.features.*`**: Toggle individual stat displays
 - **`display.compact_mode`**: Use minimal single-line display
+
+### Toggle Button (Runtime Control)
+
+A **YouTube toggle button** appears in the lower right corner when YouTube integration is available:
+
+- **Red "YT ✗" button**: YouTube integration is disabled
+- **Green "YT ✓" button**: YouTube integration is enabled
+- **Click to toggle**: Enable/disable YouTube features without restarting the app
+- **Persistent**: State is saved to config.json and persists across restarts
+
+**Benefits:**
+- Quick disable during non-streaming hours (saves API quota)
+- Instant feedback without editing config files
+- No app restart required
+- Perfect for troubleshooting or battery saving
+
+See [TOGGLE_BUTTON_GUIDE.md](TOGGLE_BUTTON_GUIDE.md) for visual mockups and detailed behavior.
 
 ### Environment Variables
 
