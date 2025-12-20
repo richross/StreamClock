@@ -1,0 +1,20 @@
+{
+  "youtube": {
+    "api_key": "",
+    "channel_id": "",
+    "enabled": false,
+    "polling_interval": 30,
+    "features": {
+      "viewer_count": true,
+      "stream_duration": true,
+      "chat_activity": true,
+      "stream_status": true,
+      "subscriber_count": true,
+      "stream_health": true
+    }
+  },
+  "display": {
+    "show_offline_message": true,
+    "compact_mode": false
+  }
+}

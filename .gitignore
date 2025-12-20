@@ -34,3 +34,6 @@ Thumbs.db
 
 # Kivy log files
 .kivy/
+
+# Configuration files (contain API keys)
+config.json

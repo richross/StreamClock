@@ -1,5 +1,6 @@
 kivy==2.2.1
+# YouTube API integration
+google-api-python-client==2.108.0
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
 # If targeting Raspberry Pi, use the platform-specific wheels or install via apt where applicable
-# Additional optional deps for streaming integrations (not required yet):
-# google-api-python-client
-# websocket-client
