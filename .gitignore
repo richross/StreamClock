@@ -32,5 +32,8 @@ Thumbs.db
 # Environment variables
 .env
 
+# Local dashboard configuration
+config.json
+
 # Kivy log files
 .kivy/

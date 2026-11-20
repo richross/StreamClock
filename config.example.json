@@ -1,0 +1,14 @@
+{
+  "location_name": "",
+  "latitude": null,
+  "longitude": null,
+  "timezone": null,
+  "temperature_unit": "celsius",
+  "messages": [
+    "Make room for one good thing today.",
+    "Small steps still move you forward.",
+    "Take a moment to notice something good."
+  ],
+  "night_start": "21:00",
+  "night_end": "07:00"
+}
